@@ -1,0 +1,63 @@
+<html>
+<head>
+<title> Lab 5</title>
+<script src="scripts/processing.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+
+PImage chips; 
+PImage coke;
+PImage sup;
+
+void setup(){
+
+size(2000,2000);
+background(500,500,500);
+frameRate( 30 );
+
+stroke(255,255,255); // chips
+fill(0,0,255);
+rect(50,400,200,50);
+
+fill(255,255,255);
+textSize(30);
+text("$10.00",100,435);
+
+stroke(255,255,255); // coke
+fill(255,0,0);
+rect(300,400,200,50);
+
+fill(255,255,255);
+textSize(30);
+text("$10.00",350,435);
+
+stroke(255,255,255); // 7up
+fill(0,255,0);
+rect(550,400,200,50);
+
+fill(255,255,255);
+textSize(30);
+text("$10.00",600,435);
+
+chips = loadImage("images/chips.jpg");
+
+coke = loadImage ("images/coke.png");
+
+sup = loadImage ("images/sup.jpg");
+}
+
+void draw()
+{
+
+image(chips,0,0,300,350);
+image(coke,250,0,300,350);
+image(sup,500,0,300,350);
+}
+
+</script>
+<canvas id="mycanvas"></canvas>
+</head>
+
+<body>
+
+</body>
+</html>
