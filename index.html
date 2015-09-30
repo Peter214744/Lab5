@@ -4,53 +4,42 @@
 <script src="scripts/processing.js"></script>
 <script type="text/processing" data-processing-target="mycanvas">
 
-PImage chips; 
-PImage coke;
-PImage sup;
+void setup()
+{
 
-void setup(){
+	size(300,300);
+	frameRate( 30 );
 
-size(2000,2000);
-background(500,500,500);
-frameRate( 30 );
-
-stroke(255,255,255); // chips
-fill(0,0,255);
-rect(50,400,200,50);
-
-fill(255,255,255);
-textSize(30);
-text("$10.00",100,435);
-
-stroke(255,255,255); // coke
-fill(255,0,0);
-rect(300,400,200,50);
-
-fill(255,255,255);
-textSize(30);
-text("$10.00",350,435);
-
-stroke(255,255,255); // 7up
-fill(0,255,0);
-rect(550,400,200,50);
-
-fill(255,255,255);
-textSize(30);
-text("$10.00",600,435);
-
-chips = loadImage("images/chips.jpg");
-
-coke = loadImage ("images/coke.png");
-
-sup = loadImage ("images/sup.jpg");
 }
+
 
 void draw()
 {
 
-image(chips,0,0,300,350);
-image(coke,250,0,300,350);
-image(sup,500,0,300,350);
+	background(0,0,0);
+	fill(255,255,255);
+	rect(40,40,99,99);
+	text(mouseX,10,10);
+	text(mouseY,10,20);
+
+	if (mouseX > 73 && mouseX < 106 &&
+		mouseY > 73 && mouseY <106 )
+	{
+		fill(255,0,0);
+		text ("kkk",89.5,89.5);
+	}
+	
+line(73,0,73,300);
+line(106,0,106,300);
+line(0,73,300,73);
+line(0,106,300,106);
+	
+	if (mouseY == 40)
+	{
+		fill (0,255,0);
+		text("kkk",87,90);
+	}
+
 }
 
 </script>
